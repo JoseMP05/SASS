@@ -1,0 +1,5 @@
+This comands are for run it when the codespaces is init
+
+npm install -g sass
+
+npm run sass
