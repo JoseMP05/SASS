@@ -1,0 +1,120 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$colors:(
+    primary: #ebebeb,
+    secondary: #000000,
+    alternative: #231f20,
+    alternative-50: #cbc4c6,
+    women: #fde2d8,
+);
+
+.paymentMethods {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 180px;
+  background-color: map-get($colors, alternative-50);
+}
+
+.method{
+  padding: 20px;
+}
+
+.footerInfo{
+    background-color: map-get($colors, secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get($colors, primary);
+    padding: 30px 0;
+}
+
+.footerInfo .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 80%;
+}
+
+.infoContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 30px 0;
+    
+}
+
+.info h2{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid map-get($colors, primary);
+    border-radius: 5px;
+}
+
+.legal ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.legal ul li{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact .contactNumber{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact h4{
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 150%;
+}
+
+.contact h4 span{
+    font-weight: bold;
+}
+
+.social .socialLogos{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.footerInfo hr{
+    width: 80%;
+}
+
+.urcubeFooter{
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.urcubeFooter h2{
+    font-size: 14px;
+}
