@@ -1,20 +1,20 @@
 {
   "name": "sass",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "rm -rf ./dist/css & sass --watch ./src/scss/styles.scss ./dist/css/styles.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JoseMP05/SASS.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JoseMP05/SASS/issues"
-  },
-  "homepage": "https://github.com/JoseMP05/SASS#readme"
+    "sass": "sass --watch --no-source-map ./src2/scss/main.scss ./dist2/css/main.css"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/JoseMP05/SASS.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/JoseMP05/SASS/issues"
+    },
+    "homepage": "https://github.com/JoseMP05/SASS#readme",
+    "description": ""
 }
