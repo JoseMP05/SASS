@@ -13,125 +13,90 @@
     padding: 20px;
   }
 }
-/* 
-.footer-info {
-  background-color: map-get($colors, secondary);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: map-get($colors, primary);
-  padding: 30px 0;
-}
 
-.info {
-  background-color: map-get($colors, secondary);
-  display: flex; //utilizar mixin de flex
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: map-get($colors, primary);
-  padding: 30px 0;
+.footer {
+  &__info {
+    background-color: map-get($colors, secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: map-get($colors, primary);
+    padding: 30px 0;
+  }
   &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 80%;
+    width: 85%;
+    max-width: 400px;
   }
-  &__colums {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin: 30px 0;
-  }
-}
-
-.footer-info .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 80%;
-}
-
-.footer__info {
   &__columns {
-    width: 80%;
+    width: 85%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     margin: 30px 0;
   }
-}
-
-.info h2 {
-  font-size: 18px; //utilizar variables
-  font-weight: bold;
-  padding: 10px 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid map-get($colors, primary);
-  border-radius: 5px;
-}
-
-ul .linksLegal {
-  @include list;
-}
-
-.legal ul{
-    list-style: none;
+  &__column--legal,
+  &__column--contact,
+  &__column--social {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+  }
+  &__column--contact {
+    h3 {
+      font-size: map-get($fonts-sizes, text-m);
+      font-weight: map-get($font-weights, "regular");
+      span {
+        font-weight: map-get($font-weights, "bold");
+      }
+    }
+  }
+  &__title {
+    font-size: map-get($fonts-sizes, text-m);
+    font-weight: map-get($font-weights, "bold");
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid map-get($colors, primary);
+    border-radius: 5px;
+  }
+  &__link {
+    font-size: map-get($fonts-sizes, normal);
+    font-weight: map-get($font-weights, "bold");
+    color: map-get($colors, primary);
+  }
 }
 
-.legal ul li{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.contact{
+.container {
+  &__legal {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-}
-
-.contact .contactNumber{
+    gap: 16px;
+  }
+  &__contact {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.contact h4{
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 150%;
-}
-
-.contact h4 span{
-    font-weight: bold;
-}
-
-.social .socialLogos{
+  }
+  &__social {
     display: flex;
     flex-direction: row;
-    gap: 6px;
+    gap: 12px;
+  }
 }
-
-.footer-info hr{
-    width: 80%;
+.urcube {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  max-width: 400px;
+  gap: 20px;
+  &__title {
+    font-size: map-get($fonts-sizes, small);
+    font-weight: map-get($font-weights, "regular");
+  }
 }
-
-.urcubeFooter{
-    display: flex;
-    flex-direction: row;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.urcubeFooter h2{
-    font-size: 14px;
-} */

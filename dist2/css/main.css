@@ -42,125 +42,82 @@ body {
   padding: 20px;
 }
 
-/* 
-.footer-info {
-  background-color: map-get($colors, secondary);
+.footer__info {
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: map-get($colors, primary);
+  color: #ebebeb;
   padding: 30px 0;
 }
-
-.info {
-  background-color: map-get($colors, secondary);
-  display: flex; //utilizar mixin de flex
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: map-get($colors, primary);
-  padding: 30px 0;
-  &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 80%;
-  }
-  &__colums {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin: 30px 0;
-  }
-}
-
-.footer-info .logo {
+.footer__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
-  width: 80%;
+  width: 85%;
+  max-width: 400px;
 }
-
-.footer__info {
-  &__columns {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin: 30px 0;
-  }
+.footer__columns {
+  width: 85%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 30px 0;
 }
-
-.info h2 {
-  font-size: 18px; //utilizar variables
-  font-weight: bold;
+.footer__column--legal, .footer__column--contact, .footer__column--social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__column--contact h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer__column--contact h3 span {
+  font-weight: 700;
+}
+.footer__title {
+  font-size: 18px;
+  font-weight: 700;
   padding: 10px 0;
   margin-bottom: 10px;
-  border-bottom: 1px solid map-get($colors, primary);
+  border-bottom: 1px solid #ebebeb;
   border-radius: 5px;
 }
-
-ul .linksLegal {
-  @include list;
+.footer__link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ebebeb;
 }
 
-.legal ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.container__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container__contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container__social {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
-.legal ul li{
-    font-size: 16px;
-    font-weight: bold;
+.urcube {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  max-width: 400px;
+  gap: 20px;
 }
-
-.contact{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.urcube__title {
+  font-size: 14px;
+  font-weight: 400;
 }
-
-.contact .contactNumber{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.contact h4{
-    font-size: 16px;
-    font-weight: lighter;
-    line-height: 150%;
-}
-
-.contact h4 span{
-    font-weight: bold;
-}
-
-.social .socialLogos{
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-}
-
-.footer-info hr{
-    width: 80%;
-}
-
-.urcubeFooter{
-    display: flex;
-    flex-direction: row;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.urcubeFooter h2{
-    font-size: 14px;
-} */
