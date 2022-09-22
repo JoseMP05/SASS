@@ -10,14 +10,10 @@
   min-height: 180px;
   background-color: map-get($colors, alternative-50);
   &__method {
-    padding: 20px; /*Pa decirle a Jose*/
+    padding: 20px;
   }
 }
-
-/* .paymentMethods__method{
-  padding: 20px;
-} */
-
+/* 
 .footer-info {
   background-color: map-get($colors, secondary);
   display: flex;
@@ -30,7 +26,7 @@
 
 .info {
   background-color: map-get($colors, secondary);
-  display: flex;
+  display: flex; //utilizar mixin de flex
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -71,7 +67,7 @@
 }
 
 .info h2 {
-  font-size: 18px;
+  font-size: 18px; //utilizar variables
   font-weight: bold;
   padding: 10px 0;
   margin-bottom: 10px;
@@ -82,7 +78,7 @@
 ul .linksLegal {
   @include list;
 }
-/* 
+
 .legal ul{
     list-style: none;
     display: flex;

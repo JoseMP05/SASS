@@ -18,7 +18,7 @@ $font-families: (
   Numbers: "Poppins, sans-serif",
 );
 
-$fonts-size: (
+$fonts-sizes: (
   small: 14px,
   normal: 16px,
   text-m: 18px,
@@ -32,12 +32,18 @@ $fonts-size: (
 
 $line-heights-list: 150%, 140%, 130%, 125%, 115%, auto;
 
-@if $font-size >= 64px {
+@if map-get($fonts-sizes, gigant) {
   $line-height: nth($line-heights-list, 6);
-} @else if $font-size <= 40px {
+} @else if map-get($fonts-sizes, big) or map-get($fonts-sizes, text-xlll) {
   $line-height: nth($line-heights-list, 5);
-} @else if $font-size <= 32px {
+} @else if map-get($fonts-sizes, text-xll) {
   $line-height: nth($line-heights-list, 4);
+} @else if map-get($fonts-sizes, text-xl) {
+  $line-height: nth($line-heights-list, 3);
+} @else if map-get($fonts-sizes, text-lg) or map-get($fonts-sizes, text-m) {
+  $line-height: nth($line-heights-list, 2);
+} @else {
+  $line-height: nth($line-heights-list, 1);
 }
 
 $breakpoints: (
@@ -47,13 +53,24 @@ $breakpoints: (
 );
 
 @mixin responsive() {
+  /*todos los mixins en un archivo de solo mixins*/
   display: flex;
   justify-content: baseline;
   @media screen and (min-width: map-get($breakpoints, $key)) {
   }
 }
 
+@mixin flex($main-axis, $cross-axis, $flex: flex, $direction: row) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+  flex: wrap;
+  @content;
+}
 @mixin list() {
+  /*esto cuenta como reinicio de estilos, entonces to eso en lugar de un mixin
+  mandelo para el archivo de reboot*/
   list-style: none;
   padding-left: 0;
   margin-top: 0;
