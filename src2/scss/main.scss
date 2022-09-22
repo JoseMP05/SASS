@@ -1,16 +1,5 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-$colors:(
-    primary: #ebebeb,
-    secondary: #000000,
-    alternative: #231f20,
-    alternative-50: #cbc4c6,
-    women: #fde2d8,
-);
+@import "variables";
+@import "reboot";
 
 .paymentMethods {
   display: flex;
@@ -20,48 +9,80 @@ $colors:(
   align-items: center;
   min-height: 180px;
   background-color: map-get($colors, alternative-50);
+  &__method {
+    padding: 20px; /*Pa decirle a Jose*/
+  }
 }
 
-.method{
+/* .paymentMethods__method{
   padding: 20px;
+} */
+
+.footer-info {
+  background-color: map-get($colors, secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: map-get($colors, primary);
+  padding: 30px 0;
 }
 
-.footerInfo{
-    background-color: map-get($colors, secondary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: map-get($colors, primary);
-    padding: 30px 0;
-}
-
-.footerInfo .logo{
+.info {
+  background-color: map-get($colors, secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: map-get($colors, primary);
+  padding: 30px 0;
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 80%;
-}
-
-.infoContainer{
+  }
+  &__colums {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 24px;
     margin: 30px 0;
-    
+  }
 }
 
-.info h2{
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    border-bottom: 1px solid map-get($colors, primary);
-    border-radius: 5px;
+.footer-info .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 80%;
 }
 
+.footer__info {
+  &__columns {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 30px 0;
+  }
+}
+
+.info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid map-get($colors, primary);
+  border-radius: 5px;
+}
+
+ul .linksLegal {
+  @include list;
+}
+/* 
 .legal ul{
     list-style: none;
     display: flex;
@@ -102,7 +123,7 @@ $colors:(
     gap: 6px;
 }
 
-.footerInfo hr{
+.footer-info hr{
     width: 80%;
 }
 
@@ -117,4 +138,4 @@ $colors:(
 
 .urcubeFooter h2{
     font-size: 14px;
-}
+} */

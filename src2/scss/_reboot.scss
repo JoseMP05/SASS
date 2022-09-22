@@ -1,0 +1,36 @@
+@import "variables";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: map-get($colors, "secondary");
+  font: {
+    family: map-get($font-families, default);
+    weight: map-get($font-weights, "regular");
+    size: 1rem;
+  }
+  line-height: $line-height;
+}
+
+.number {
+  font-family: map-get($font-families, number);
+}

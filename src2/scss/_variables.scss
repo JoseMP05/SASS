@@ -1,0 +1,61 @@
+$colors: (
+  primary: #ebebeb,
+  secondary: #000000,
+  alternative: #231f20,
+  alternative-50: #cbc4c6,
+  women: #fde2d8,
+);
+
+$font-weights: (
+  "regular": 400,
+  "semi-bold": 500,
+  "bold": 700,
+  "black": 900,
+);
+
+$font-families: (
+  Default: "Raleway, sans-serif",
+  Numbers: "Poppins, sans-serif",
+);
+
+$fonts-size: (
+  small: 14px,
+  normal: 16px,
+  text-m: 18px,
+  text-lg: 20px,
+  text-xl: 24px,
+  text-xll: 32px,
+  text-xlll: 40px,
+  big: 48px,
+  gigant: 64px,
+);
+
+$line-heights-list: 150%, 140%, 130%, 125%, 115%, auto;
+
+@if $font-size >= 64px {
+  $line-height: nth($line-heights-list, 6);
+} @else if $font-size <= 40px {
+  $line-height: nth($line-heights-list, 5);
+} @else if $font-size <= 32px {
+  $line-height: nth($line-heights-list, 4);
+}
+
+$breakpoints: (
+  tablet: 640px,
+  laptop: 1024px,
+  desktop: 1440px,
+);
+
+@mixin responsive() {
+  display: flex;
+  justify-content: baseline;
+  @media screen and (min-width: map-get($breakpoints, $key)) {
+  }
+}
+
+@mixin list() {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
