@@ -52,19 +52,18 @@ $breakpoints: (
   desktop: 1440px,
 );
 
-@mixin responsive() {
+@mixin responsive($key) {
   /*todos los mixins en un archivo de solo mixins*/
-  display: flex;
-  justify-content: baseline;
   @media screen and (min-width: map-get($breakpoints, $key)) {
   }
+  @content;
 }
 
-@mixin flex($main-axis, $cross-axis, $flex: flex, $direction: row) {
+@mixin flex($main-axis, $cross-axis, $direction: row, $flex: flex) {
   display: $flex;
   flex-direction: $direction;
   justify-content: $main-axis;
   align-items: $cross-axis;
-  flex: wrap;
+  flex-wrap: wrap;
   @content;
 }

@@ -32,14 +32,16 @@ body {
 .paymentMethods {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  min-height: 180px;
+  flex-wrap: wrap;
+  height: 155px;
+  column-gap: 20px;
+  padding: 10px;
   background-color: #cbc4c6;
 }
 .paymentMethods__method {
-  padding: 20px;
+  height: 48px;
 }
 
 .footer__info {
@@ -48,35 +50,52 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   color: #ebebeb;
-  padding: 30px 0;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  max-width: 500px;
 }
 .footer__logo {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 100px;
-  width: 85%;
-  max-width: 400px;
+  width: 90%;
 }
 .footer__columns {
-  width: 85%;
-  max-width: 400px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin: 30px 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.footer__column--legal, .footer__column--contact, .footer__column--social {
+.footer__column {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
 }
-.footer__column--contact h3 {
+.footer__column--contact address {
   font-size: 18px;
   font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
 }
-.footer__column--contact h3 span {
+.footer__column--contact address span {
   font-weight: 700;
 }
 .footer__title {
@@ -85,7 +104,22 @@ body {
   padding: 10px 0;
   margin-bottom: 10px;
   border-bottom: 1px solid #ebebeb;
-  border-radius: 5px;
+  border-radius: 3px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer__container--legal {
+  flex-direction: column;
+  gap: 16px;
+}
+.footer__container--contact {
+  justify-content: space-between;
 }
 .footer__link {
   font-size: 16px;
@@ -93,31 +127,119 @@ body {
   color: #ebebeb;
 }
 
-.container__legal {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.container__contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.container__social {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-}
-
 .urcube {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 80%;
-  max-width: 400px;
-  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 450px;
+  column-gap: 20px;
+  row-gap: 12px;
+  padding: 20px 0;
+  border-top: 1px solid #ebebeb;
 }
 .urcube__title {
   font-size: 14px;
   font-weight: 400;
 }
+
+/*todos los mixins en un archivo de solo mixins*/
+/*todos los mixins en un archivo de solo mixins*/
+@media screen and (min-width: 1024px) {
+  .paymentMethods {
+    height: 105px;
+    column-gap: 32px;
+    justify-content: center;
+  }
+  .footer__info {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ebebeb;
+  }
+  .footer__content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+  }
+  .footer__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 85%;
+    max-width: 480px;
+  }
+  .footer__columns {
+    width: 100%;
+    max-width: none;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+  .footer__column--contact address {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+  }
+  .footer__column--contact address span {
+    font-weight: 700;
+  }
+  .footer__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 3px;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer__container--legal {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer__container--contact {
+    justify-content: space-between;
+  }
+  .footer__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ebebeb;
+  }
+  .urcube {
+    column-gap: 20px;
+    row-gap: 12px;
+    padding: 40px 10px;
+    border-top: 1px solid #ebebeb;
+  }
+  .urcube__title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+/*todos los mixins en un archivo de solo mixins*/

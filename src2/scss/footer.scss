@@ -1,0 +1,178 @@
+.paymentMethods {
+  @include flex(space-evenly, center);
+  height: 155px;
+  column-gap: 20px;
+  padding: 10px;
+  background-color: map-get($colors, alternative-50);
+  &__method {
+    height: 48px;
+  }
+}
+
+.footer {
+  &__info {
+    background-color: map-get($colors, secondary);
+    @include flex(center, center, column);
+    color: map-get($colors, primary);
+  }
+  &__content {
+    @include flex(center, center, column);
+    padding: 40px 0;
+    max-width: 500px;
+  }
+  &__logo {
+    @include flex(center, center);
+    height: 100px;
+    width: 90%;
+  }
+  &__columns {
+    width: 90%;
+    @include flex(center, center, column);
+    gap: 20px;
+  }
+  &__column {
+    @include flex(start, stretch, column);
+    gap: 12px;
+    width: 100%;
+  }
+  &__column--contact {
+    address {
+      font-size: map-get($fonts-sizes, text-m);
+      font-weight: map-get($font-weights, "regular");
+      font-style: normal;
+      line-height: 24px;
+      span {
+        font-weight: map-get($font-weights, "bold");
+      }
+    }
+  }
+  &__title {
+    font-size: map-get($fonts-sizes, text-m);
+    font-weight: map-get($font-weights, "bold");
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid map-get($colors, primary);
+    border-radius: 3px;
+  }
+  &__container {
+    @include flex(start, start, row);
+    &--legal {
+      flex-direction: column;
+      gap: 16px;
+    }
+    &--contact {
+      justify-content: space-between;
+    }
+    gap: 20px;
+  }
+  &__link {
+    font-size: map-get($fonts-sizes, normal);
+    font-weight: map-get($font-weights, "bold");
+    color: map-get($colors, primary);
+  }
+}
+
+.urcube {
+  @include flex(center, center, row);
+  width: 90%;
+  max-width: 450px;
+  column-gap: 20px;
+  row-gap: 12px;
+  padding: 20px 0;
+  border-top: 1px solid map-get($colors, primary);
+  &__title {
+    font-size: map-get($fonts-sizes, small);
+    font-weight: map-get($font-weights, "regular");
+  }
+}
+
+@mixin tablet {
+  /*No es necesario por el momento*/
+}
+
+@mixin footer__laptop {
+  .paymentMethods {
+    height: 105px;
+    column-gap: 32px;
+    justify-content: center;
+  }
+  .footer {
+    &__info {
+      background-color: map-get($colors, secondary);
+      @include flex(center, center, column);
+      color: map-get($colors, primary);
+    }
+    &__content {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 40px 0;
+    }
+    &__logo {
+      @include flex(center, center);
+      height: 100px;
+      width: 85%;
+      max-width: 480px;
+    }
+    &__columns {
+      width: 100%;
+      max-width: none;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    &__column {
+      @include flex(start, stretch, column);
+      gap: 12px;
+      width: 100%;
+    }
+    &__column--contact {
+      address {
+        font-size: map-get($fonts-sizes, text-m);
+        font-weight: map-get($font-weights, "regular");
+        font-style: normal;
+        line-height: 24px;
+        span {
+          font-weight: map-get($font-weights, "bold");
+        }
+      }
+    }
+    &__title {
+      font-size: map-get($fonts-sizes, text-m);
+      font-weight: map-get($font-weights, "bold");
+      padding: 10px 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid map-get($colors, primary);
+      border-radius: 3px;
+    }
+    &__container {
+      @include flex(start, start, row);
+      &--legal {
+        flex-direction: column;
+        gap: 16px;
+      }
+      &--contact {
+        justify-content: space-between;
+      }
+      gap: 20px;
+    }
+    &__link {
+      font-size: map-get($fonts-sizes, normal);
+      font-weight: map-get($font-weights, "bold");
+      color: map-get($colors, primary);
+    }
+  }
+  .urcube {
+    column-gap: 20px;
+    row-gap: 12px;
+    padding: 40px 10px;
+    border-top: 1px solid map-get($colors, primary);
+    &__title {
+      font-size: map-get($fonts-sizes, small);
+      font-weight: map-get($font-weights, "regular");
+    }
+  }
+}
+
+@mixin desktop {
+}

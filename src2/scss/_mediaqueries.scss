@@ -1,0 +1,15 @@
+@include responsive(tablet) {
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+  }
+}
+
+@include responsive(laptop) {
+  @media screen and (min-width: map-get($breakpoints, laptop)) {
+    @include footer__laptop;
+  }
+}
+
+@include responsive(desktop) {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+  }
+}
